@@ -246,14 +246,25 @@ def main(
     logger.add(osp.join(working_root, 'autoformalization_equiv_checked_beq_basic.log'))
     logger.info(f'hyperparameters: {saved_args}')
 
-    with open(osp.join(dataset_root, eval_set, 'library.jsonl'), 'r') as f:
-        premises_with_informalization = [json.loads(l) for l in f.readlines()]
-    premises_dict = {p['full_name'] : p for p in premises_with_informalization}
+    # Load library (CONNF has it, ProofNet doesn't)
+    library_path = osp.join(dataset_root, eval_set, 'library.jsonl')
+    if osp.exists(library_path):
+        with open(library_path, 'r') as f:
+            premises_with_informalization = [json.loads(l) for l in f.readlines()]
+        premises_dict = {p['full_name'] : p for p in premises_with_informalization}
+    else:
+        logger.warning(f'No library.jsonl found for {eval_set}, using empty premises')
+        premises_with_informalization = []
+        premises_dict = {}
 
     samples = []
     with open(osp.join(dataset_root, eval_set, 'benchmark.jsonl'), 'r') as f:
         for line in f.readlines():
-            samples.append(json.loads(line))
+            sample = json.loads(line)
+            # Normalize data structure: add 'full_name' if missing (for ProofNet compatibility)
+            if 'full_name' not in sample:
+                sample['full_name'] = sample.get('id', f'problem_{len(samples)}')
+            samples.append(sample)
     # ['informal_stmt', 'formal_stmt', 'header', 'proof_state', 'mathlib_dependencies', 'hard_dependencies', 'source', 'problem_name']
 
     loop = asyncio.get_event_loop()
@@ -460,11 +471,14 @@ def main(
         try:
             with open(osp.join(working_root, f'autoformalization_equiv_checked_beq_basic.json'), 'w') as f:
                 json.dump(autoformalization_result, f)
-            response = requests.post(
-                url=url+ ('/stop' if not url.endswith('/stop') else ''), json=''
-            )
+            # Only stop server if we started it locally (not external API)
+            if url.startswith('http://localhost') and '/v1' not in url:
+                response = requests.post(
+                    url=url+ ('/stop' if not url.endswith('/stop') else ''), json=''
+                )
+                logger.info('Local server stopped')
         except Exception as e:
-            logger.warning(f'Server ended with {e}')
+            logger.warning(f'Server cleanup with {e}')
 
 
 @app.get("/health")
