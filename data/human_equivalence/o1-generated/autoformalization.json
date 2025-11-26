@@ -1,0 +1,252 @@
+{
+  "c463": [
+    {
+      "autoformalized_statement": "theorem  question215_278_2153_17268 (x : \u211d) : \n    x \u2208 solution \u2194 \n    (x \u2265 0 \u2227 2 - Real.sqrt x \u2265 0 \u2227 1 - Real.sqrt (2 - Real.sqrt x) \u2265 0) := by sorry",
+      "typecheck_result": {
+        "is_success": true,
+        "lean_env": 1,
+        "verification_details": {
+          "is_valid": true,
+          "is_valid_with_sorry": true,
+          "has_sorry": true,
+          "detailed_errors": [],
+          "raw_result": "id='0' time=0.012756 error=None response={'messages': [{'severity': 'warning', 'pos': {'line': 1, 'column': 18}, 'endPos': {'line': 1, 'column': 26}, 'data': \"declaration uses 'sorry'\"}, {'severity': 'warning', 'pos': {'line': 2, 'column': 9}, 'endPos': {'line': 2, 'column': 35}, 'data': \"declaration uses 'sorry'\"}], 'sorries': [{'pos': {'line': 1, 'column': 38}, 'endPos': {'line': 1, 'column': 43}, 'goal': '\u22a2 Set \u211d'}, {'pos': {'line': 2, 'column': 73}, 'endPos': {'line': 2, 'column': 78}, 'goal': 'x : \u211d\\n\u22a2 x \u2208 solution \u2194 x \u2265 1 \u2227 x \u2264 4'}]} diagnostics=None",
+          "error": null,
+          "verification_error": false
+        }
+      },
+      "metadata": {
+        "original_id": "c463",
+        "informal": "Compute the domain of the real-valued function \\[f(x)=\\sqrt{1-\\sqrt{2-\\sqrt{x}}}.\\]",
+        "success": true,
+        "Check": 1,
+        "status": "complete_success"
+      }
+    }
+  ],
+  "c1880": [
+    {
+      "autoformalized_statement": "theorem  question89_1245_8888 {X : Type*} [TopologicalSpace X] {F : Set X} \n    (hF : IsTopologicalSpace F) (x : X) (hx : x \u2208 F) :\n    solution \u2194 \n    (\u2203 P : PathConnectedSet F, P.path_component = {y : X | \u2203 p : X \u2192 X, Continuous p \u2227 p 0 = x \u2227 p 1 = y \u2227 \u2200 t, p t \u2208 F} \u2227\n     \u2200 y \u2208 F, y \u2208 P.path_component) := by sorry",
+      "typecheck_result": {
+        "is_success": false,
+        "lean_env": 1,
+        "verification_details": {
+          "is_valid": false,
+          "is_valid_with_sorry": false,
+          "has_sorry": true,
+          "detailed_errors": [],
+          "raw_result": "id='0' time=0.073667 error=None response={'messages': [{'severity': 'warning', 'pos': {'line': 12, 'column': 7}, 'endPos': {'line': 12, 'column': 15}, 'data': \"declaration uses 'sorry'\"}, {'severity': 'error', 'pos': {'line': 17, 'column': 89}, 'endPos': {'line': 17, 'column': 90}, 'data': 'failed to synthesize\\n  OfNat X 0\\nnumerals are polymorphic in Lean, but the numeral `0` cannot be used in a context where the expected type is\\n  X\\ndue to the absence of the instance above\\nAdditional diagnostic information may be available using the `set_option diagnostics true` command.'}, {'severity': 'error', 'pos': {'line': 17, 'column': 99}, 'endPos': {'line': 17, 'column': 100}, 'data': 'failed to synthesize\\n  OfNat X 1\\nnumerals are polymorphic in Lean, but the numeral `1` cannot be used in a context where the expected type is\\n  X\\ndue to the absence of the instance above\\nAdditional diagnostic information may be available using the `set_option diagnostics true` command.'}, {'severity': 'error', 'pos': {'line': 15, 'column': 10}, 'endPos': {'line': 15, 'column': 30}, 'data': 'function expected at\\n  IsTopologicalSpace\\nterm has type\\n  ?m.530'}], 'sorries': [{'pos': {'line': 12, 'column': 26}, 'endPos': {'line': 12, 'column': 31}, 'goal': '\u22a2 Bool'}, {'pos': {'line': 18, 'column': 42}, 'endPos': {'line': 18, 'column': 47}, 'goal': \"x\u271d : Sort u_2\\nIsTopologicalSpace : x\u271d\\nX : Type u_1\\ninst\u271d : TopologicalSpace X\\nF : Set X\\nhF : sorry\\nx : X\\nhx : x \u2208 F\\n\u22a2 failed to pretty print expression (use 'set_option pp.rawOnError true' for raw representation)\"}]} diagnostics=None",
+          "error": null,
+          "verification_error": false
+        }
+      },
+      "metadata": {
+        "original_id": "c1880",
+        "informal": "Prove that a set F is path-connected if and only if there exists an element x in F such that the path component of x in F is equal to F.",
+        "success": false,
+        "Check": -1,
+        "status": "verification_failed"
+      }
+    }
+  ],
+  "c1720": [
+    {
+      "autoformalized_statement": "theorem  question7_1_857_8443 {M \u03b1 : Type*} [Group M] [MulAction M \u03b1] :\n    \u2200 S T : Set \u03b1, S \u2286 T \u2192 \n    {m : M | \u2200 t \u2208 T, m \u2022 t = t} \u2264 {m : M | \u2200 s \u2208 S, m \u2022 s = s} := by sorry",
+      "typecheck_result": {
+        "is_success": true,
+        "lean_env": 1,
+        "verification_details": {
+          "is_valid": true,
+          "is_valid_with_sorry": true,
+          "has_sorry": true,
+          "detailed_errors": [],
+          "raw_result": "id='0' time=0.099363 error=None response={'messages': [{'severity': 'warning', 'pos': {'line': 1, 'column': 7}, 'endPos': {'line': 1, 'column': 15}, 'data': \"declaration uses 'sorry'\"}, {'severity': 'warning', 'pos': {'line': 4, 'column': 9}, 'endPos': {'line': 4, 'column': 29}, 'data': \"declaration uses 'sorry'\"}], 'sorries': [{'pos': {'line': 2, 'column': 25}, 'endPos': {'line': 2, 'column': 30}, 'goal': 'M : Type u_1\\n\u03b1 : Type u_2\\ninst\u271d\u00b9 : Group M\\ninst\u271d : MulAction M \u03b1\\n\u22a2 Set (Set \u03b1 \u00d7 Set M)'}, {'pos': {'line': 6, 'column': 70}, 'endPos': {'line': 6, 'column': 75}, 'goal': 'M : Type u_1\\n\u03b1 : Type u_2\\ninst\u271d\u00b9 : Group M\\ninst\u271d : MulAction M \u03b1\\n\u22a2 \u2200 (S T : Set \u03b1), S \u2286 T \u2192 {m | \u2200 t \u2208 T, m \u2022 t = t} \u2264 {m | \u2200 s \u2208 S, m \u2022 s = s}'}]} diagnostics=None",
+          "error": null,
+          "verification_error": false
+        }
+      },
+      "metadata": {
+        "original_id": "c1720",
+        "informal": "Prove that for a group M acting on a set \u03b1, the function \"fixingSubgroup\" is antitone. This function takes a subset of \u03b1 and returns the subgroup of M that fixes all elements in that subset. Antitone means that if we have two subsets of \u03b1, say S and T, where S is a subset of T, then the fixing subgroup of T is a subgroup of the fixing subgroup of S.",
+        "success": true,
+        "Check": 1,
+        "status": "complete_success"
+      }
+    }
+  ],
+  "c1422": [
+    {
+      "autoformalized_statement": "theorem  question179_1617_11603 (n k : \u2115) :\n    \u2211 i \u2208 range (k + 1), Nat.choose (n + i) n = Nat.choose (n + k + 1) (n + 1) := by sorry",
+      "typecheck_result": {
+        "is_success": true,
+        "lean_env": 1,
+        "verification_details": {
+          "is_valid": true,
+          "is_valid_with_sorry": true,
+          "has_sorry": true,
+          "detailed_errors": [],
+          "raw_result": "id='0' time=0.020203 error=None response={'messages': [{'severity': 'warning', 'pos': {'line': 6, 'column': 9}, 'endPos': {'line': 6, 'column': 31}, 'data': \"declaration uses 'sorry'\"}], 'sorries': [{'pos': {'line': 7, 'column': 85}, 'endPos': {'line': 7, 'column': 90}, 'goal': 'n k : \u2115\\n\u22a2 \u2211 i \u2208 range (k + 1), (n + i).choose n = (n + k + 1).choose (n + 1)'}]} diagnostics=None",
+          "error": null,
+          "verification_error": false
+        }
+      },
+      "metadata": {
+        "original_id": "c1422",
+        "informal": "Prove the Hockey Stick Identity: $\\sum_{i=0}^k \\binom{n+i}{n}=\\binom{n+k+1}{n+1}$",
+        "success": true,
+        "Check": 1,
+        "status": "complete_success"
+      }
+    }
+  ],
+  "c614": [
+    {
+      "autoformalized_statement": "theorem  question119_1159_8766_17863 :\n    (\u2191(4, 5, 6) \u2208 solution \u2194 \u00acBoxDiagonalTriple 4 5 6) \u2227\n    (\u2191(4, 5, 7) \u2208 solution \u2194 \u00acBoxDiagonalTriple 4 5 7) \u2227  \n    (\u2191(4, 6, 7) \u2208 solution \u2194 \u00acBoxDiagonalTriple 4 6 7) \u2227\n    (\u2191(5, 6, 7) \u2208 solution \u2194 \u00acBoxDiagonalTriple 5 6 7) \u2227\n    (\u2191(5, 7, 8) \u2208 solution \u2194 \u00acBoxDiagonalTriple 5 7 8) := by sorry",
+      "typecheck_result": {
+        "is_success": true,
+        "lean_env": 1,
+        "verification_details": {
+          "is_valid": true,
+          "is_valid_with_sorry": true,
+          "has_sorry": true,
+          "detailed_errors": [],
+          "raw_result": "id='0' time=2.224673 error=None response={'messages': [{'severity': 'warning', 'pos': {'line': 1, 'column': 7}, 'endPos': {'line': 1, 'column': 15}, 'data': \"declaration uses 'sorry'\"}, {'severity': 'warning', 'pos': {'line': 3, 'column': 9}, 'endPos': {'line': 3, 'column': 34}, 'data': \"declaration uses 'sorry'\"}], 'sorries': [{'pos': {'line': 1, 'column': 26}, 'endPos': {'line': 1, 'column': 31}, 'goal': '\u22a2 Bool'}, {'pos': {'line': 17, 'column': 65}, 'endPos': {'line': 17, 'column': 70}, 'goal': '\u22a2 if solution = true then\\n    \u2203 a b c,\\n      a > 0 \u2227\\n        b > 0 \u2227\\n          c > 0 \u2227\\n            (a ^ 2 + b ^ 2 = 16 \u2227 b ^ 2 + c ^ 2 = 25 \u2227 c ^ 2 + a ^ 2 = 36 \u2228\\n              a ^ 2 + b ^ 2 = 16 \u2227 b ^ 2 + c ^ 2 = 36 \u2227 c ^ 2 + a ^ 2 = 25 \u2228\\n                a ^ 2 + b ^ 2 = 25 \u2227 b ^ 2 + c ^ 2 = 16 \u2227 c ^ 2 + a ^ 2 = 36 \u2228\\n                  a ^ 2 + b ^ 2 = 25 \u2227 b ^ 2 + c ^ 2 = 36 \u2227 c ^ 2 + a ^ 2 = 16 \u2228\\n                    a ^ 2 + b ^ 2 = 36 \u2227 b ^ 2 + c ^ 2 = 16 \u2227 c ^ 2 + a ^ 2 = 25 \u2228\\n                      a ^ 2 + b ^ 2 = 36 \u2227 b ^ 2 + c ^ 2 = 25 \u2227 c ^ 2 + a ^ 2 = 16)\\n  else\\n    \u00ac\u2203 a b c,\\n        a > 0 \u2227\\n          b > 0 \u2227\\n            c > 0 \u2227\\n              (a ^ 2 + b ^ 2 = 16 \u2227 b ^ 2 + c ^ 2 = 25 \u2227 c ^ 2 + a ^ 2 = 36 \u2228\\n                a ^ 2 + b ^ 2 = 16 \u2227 b ^ 2 + c ^ 2 = 36 \u2227 c ^ 2 + a ^ 2 = 25 \u2228\\n                  a ^ 2 + b ^ 2 = 25 \u2227 b ^ 2 + c ^ 2 = 16 \u2227 c ^ 2 + a ^ 2 = 36 \u2228\\n                    a ^ 2 + b ^ 2 = 25 \u2227 b ^ 2 + c ^ 2 = 36 \u2227 c ^ 2 + a ^ 2 = 16 \u2228\\n                      a ^ 2 + b ^ 2 = 36 \u2227 b ^ 2 + c ^ 2 = 16 \u2227 c ^ 2 + a ^ 2 = 25 \u2228\\n                        a ^ 2 + b ^ 2 = 36 \u2227 b ^ 2 + c ^ 2 = 25 \u2227 c ^ 2 + a ^ 2 = 16)'}]} diagnostics=None",
+          "error": null,
+          "verification_error": false
+        }
+      },
+      "metadata": {
+        "original_id": "c614",
+        "informal": "Which of the following could NOT be the lengths of the external diagonals of a right regular prism [a \"box\"]? (An $\\textit{external diagonal}$ is a diagonal of one of the rectangular faces of the box.)\n$\\text{(A) }\\{4,5,6\\} \\quad \\text{(B) } \\{4,5,7\\}  \\quad \\text{(C) } \\{4,6,7\\} \\quad \\text{(D) } \\{5,6,7\\} \\quad \\text{(E) } \\{5,7,8\\}$",
+        "success": true,
+        "Check": 0,
+        "status": "lean_passed_judgment_failed"
+      }
+    }
+  ],
+  "c1715": [
+    {
+      "autoformalized_statement": "theorem  question72_1167_8619 (\u03b1 \u03b2 : Type) [DecidableEq \u03b1] [DecidableEq \u03b2] \n    (f : \u03b1 \u2192 \u03b2) (f' : \u03b2 \u2192 \u03b1) (s : Set \u03b1)\n    (h_left_inverse : \u2200 x \u2208 s, f' (f x) = x)\n    (y : \u03b2) (hy : y \u2208 f '' s) :\n    f (f' y) = y := by sorry",
+      "typecheck_result": {
+        "is_success": true,
+        "lean_env": 1,
+        "verification_details": {
+          "is_valid": true,
+          "is_valid_with_sorry": true,
+          "has_sorry": true,
+          "detailed_errors": [],
+          "raw_result": "id='0' time=0.019469 error=None response={'messages': [{'severity': 'warning', 'pos': {'line': 1, 'column': 7}, 'endPos': {'line': 1, 'column': 15}, 'data': \"declaration uses 'sorry'\"}, {'severity': 'warning', 'pos': {'line': 3, 'column': 9}, 'endPos': {'line': 3, 'column': 29}, 'data': \"declaration uses 'sorry'\"}], 'sorries': [{'pos': {'line': 1, 'column': 26}, 'endPos': {'line': 1, 'column': 31}, 'goal': '\u22a2 Bool'}, {'pos': {'line': 7, 'column': 58}, 'endPos': {'line': 7, 'column': 63}, 'goal': \"\u03b1 \u03b2 : Type\\ninst\u271d\u00b9 : DecidableEq \u03b1\\ninst\u271d : DecidableEq \u03b2\\nf : \u03b1 \u2192 \u03b2\\nf' : \u03b2 \u2192 \u03b1\\ns : Set \u03b1\\nh_left_inverse : \u2200 x \u2208 s, f' (f x) = x\\ny : \u03b2\\nhy : y \u2208 f '' s\\n\u22a2 if solution = true then f (f' y) = y else f (f' y) \u2260 y\"}]} diagnostics=None",
+          "error": null,
+          "verification_error": false
+        }
+      },
+      "metadata": {
+        "original_id": "c1715",
+        "informal": "Let \\(f\\) and \\(f'\\) be functions and \\(s\\) be a set. If \\(f'\\) is a left inverse of \\(f\\) on the set \\(s\\), then prove that \\(f'\\) is a right inverse of \\(f\\) on the image of \\(s\\) under \\(f\\).",
+        "success": true,
+        "Check": 1,
+        "status": "complete_success"
+      }
+    }
+  ],
+  "c1622": [
+    {
+      "autoformalized_statement": "theorem  question12_962_6985 :\n    Continuous Real.cos := by sorry",
+      "typecheck_result": {
+        "is_success": true,
+        "lean_env": 1,
+        "verification_details": {
+          "is_valid": true,
+          "is_valid_with_sorry": true,
+          "has_sorry": true,
+          "detailed_errors": [],
+          "raw_result": "id='0' time=0.024522 error=None response={'messages': [{'severity': 'warning', 'pos': {'line': 5, 'column': 9}, 'endPos': {'line': 5, 'column': 28}, 'data': \"declaration uses 'sorry'\"}], 'sorries': [{'pos': {'line': 6, 'column': 30}, 'endPos': {'line': 6, 'column': 35}, 'goal': '\u22a2 Continuous cos'}]} diagnostics=None",
+          "error": null,
+          "verification_error": false
+        }
+      },
+      "metadata": {
+        "original_id": "c1622",
+        "informal": "Prove that the cosine function (cos) is continuous.",
+        "success": true,
+        "Check": 1,
+        "status": "complete_success"
+      }
+    }
+  ],
+  "c219": [
+    {
+      "autoformalized_statement": "theorem  question89_788_5955_2561 :\n    (\u2203 (d : \u211d), \n      (11 + d)^2 = 9 * (29 + 2*d) \u2227\n      solution = 29 + 2*d) \u2227\n    (\u2200 (d' : \u211d), \n      (11 + d')^2 = 9 * (29 + 2*d') \u2192\n      29 + 2*d' \u2265 solution) := by sorry",
+      "typecheck_result": {
+        "is_success": true,
+        "lean_env": 1,
+        "verification_details": {
+          "is_valid": true,
+          "is_valid_with_sorry": true,
+          "has_sorry": true,
+          "detailed_errors": [],
+          "raw_result": "id='0' time=0.035603 error=None response={'messages': [{'severity': 'warning', 'pos': {'line': 1, 'column': 18}, 'endPos': {'line': 1, 'column': 26}, 'data': \"declaration uses 'sorry'\"}, {'severity': 'warning', 'pos': {'line': 2, 'column': 9}, 'endPos': {'line': 2, 'column': 33}, 'data': \"declaration uses 'sorry'\"}], 'sorries': [{'pos': {'line': 1, 'column': 34}, 'endPos': {'line': 1, 'column': 39}, 'goal': '\u22a2 \u211d'}, {'pos': {'line': 9, 'column': 26}, 'endPos': {'line': 9, 'column': 31}, 'goal': \"x : \u211d\\n\u22a2 x = solution \u2194\\n    (\u2203 d, 11 + d \u2260 0 \u2227 (11 + d) ^ 2 = 9 * (29 + 2 * d) \u2227 x = 29 + 2 * d) \u2227\\n      \u2200 (d' : \u211d), 11 + d' \u2260 0 \u2227 (11 + d') ^ 2 = 9 * (29 + 2 * d') \u2192 x \u2264 29 + 2 * d'\"}]} diagnostics=None",
+          "error": null,
+          "verification_error": false
+        }
+      },
+      "metadata": {
+        "original_id": "c219",
+        "informal": "A sequence of three real numbers forms an arithmetic progression with a first term of 9. If 2 is added to the second term and 20 is added to the third term, the three resulting numbers form a geometric progression. What is the smallest possible value for the third term of the geometric progression?",
+        "success": true,
+        "Check": 0,
+        "status": "lean_passed_judgment_failed"
+      }
+    }
+  ],
+  "c1748": [
+    {
+      "autoformalized_statement": "theorem  question222_1415_9942 :\n    UniformContinuous abs_rational := by sorry",
+      "typecheck_result": {
+        "is_success": true,
+        "lean_env": 1,
+        "verification_details": {
+          "is_valid": true,
+          "is_valid_with_sorry": true,
+          "has_sorry": true,
+          "detailed_errors": [],
+          "raw_result": "id='0' time=0.025763 error=None response={'messages': [{'severity': 'warning', 'pos': {'line': 3, 'column': 8}, 'endPos': {'line': 3, 'column': 29}, 'data': \"declaration uses 'sorry'\"}], 'sorries': [{'pos': {'line': 4, 'column': 64}, 'endPos': {'line': 4, 'column': 69}, 'goal': '\u22a2 UniformContinuous fun x => \u2191(abs_rational x)'}]} diagnostics=None",
+          "error": null,
+          "verification_error": false
+        }
+      },
+      "metadata": {
+        "original_id": "c1748",
+        "informal": "Prove that the absolute value function, considered as a function from the rational numbers to the rational numbers, is uniformly continuous.",
+        "success": true,
+        "Check": 1,
+        "status": "complete_success"
+      }
+    }
+  ],
+  "c1657": [
+    {
+      "autoformalized_statement": "theorem  question12_1538_11464 {E F : Type*} [NormedAddCommGroup E] [NormedAddCommGroup F] [NormedSpace \u211d E] [NormedSpace \u211d F] (T : E \u2192L[\u211d] F) :\n    \u2016-T\u2016 = \u2016T\u2016 := by sorry",
+      "typecheck_result": {
+        "is_success": true,
+        "lean_env": 1,
+        "verification_details": {
+          "is_valid": true,
+          "is_valid_with_sorry": true,
+          "has_sorry": true,
+          "detailed_errors": [],
+          "raw_result": "id='0' time=0.080308 error=None response={'messages': [{'severity': 'warning', 'pos': {'line': 1, 'column': 9}, 'endPos': {'line': 1, 'column': 30}, 'data': \"declaration uses 'sorry'\"}], 'sorries': [{'pos': {'line': 2, 'column': 21}, 'endPos': {'line': 2, 'column': 26}, 'goal': 'E : Type u_1\\nF : Type u_2\\ninst\u271d\u00b3 : NormedAddCommGroup E\\ninst\u271d\u00b2 : NormedAddCommGroup F\\ninst\u271d\u00b9 : NormedSpace \u211d E\\ninst\u271d : NormedSpace \u211d F\\nT : E \u2192L[\u211d] F\\n\u22a2 \u2016-T\u2016 = \u2016T\u2016'}]} diagnostics=None",
+          "error": null,
+          "verification_error": false
+        }
+      },
+      "metadata": {
+        "original_id": "c1657",
+        "informal": "Prove that the norm of the negative of a bounded linear map between two normed vector spaces is equal to the norm of the original map.",
+        "success": true,
+        "Check": 1,
+        "status": "complete_success"
+      }
+    }
+  ]
+}
